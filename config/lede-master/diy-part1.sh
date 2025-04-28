@@ -17,3 +17,18 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 echo >> feeds.conf.default
 echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+
+echo >> feeds.conf.default
+echo 'src-git packages https://github.com/coolsnowwolf/packages;master' >> feeds.conf.default
+echo 'src-git luci https://github.com/coolsnowwolf/luci;master' >> feeds.conf.default
+echo 'src-git routing https://github.com/coolsnowwolf/routing;main' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small;master' >> feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages;master' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git freifunk https://github.com/freifunk/openwrt-packages.git;master' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall;main' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >> feeds.conf.default
+
