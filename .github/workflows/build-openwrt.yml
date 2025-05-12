@@ -235,6 +235,7 @@ env:
   CONFIG_FILE: config/${{ inputs.source_branch }}/config
   DIY_P1_SH: config/${{ inputs.source_branch }}/diy-part1.sh
   DIY_P2_SH: config/${{ inputs.source_branch }}/diy-part2.sh
+  SSH_ACTIONS: true 
   TZ: America/New_York
 
 jobs:
@@ -328,6 +329,13 @@ jobs:
           chmod +x ${DIY_P1_SH}
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
+
+      - name: SSH connection to Actions
+        uses: P3TERX/ssh2actions@v1.0.0
+        if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
       - name: Update feeds
         run: cd openwrt/ && ./scripts/feeds update -a
