@@ -17,7 +17,6 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 echo >> feeds.conf.default
 echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
 echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
-
 echo >> feeds.conf.default
 echo 'src-git packages https://github.com/coolsnowwolf/packages;master' >> feeds.conf.default
 echo 'src-git luci https://github.com/coolsnowwolf/luci;master' >> feeds.conf.default
